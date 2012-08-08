@@ -8,13 +8,11 @@
     <version>1.1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>discovery-server</artifactId>
-  <name>service-discovery-server</name>
+  <artifactId>discovery-dns</artifactId>
+  <name>service-discovery-dns</name>
   <packaging>jar</packaging>
 
   <properties>
-    <galaxy.packaging>standalone</galaxy.packaging>
-    <galaxy.mainclass>com.nesscomputing.service.discovery.server.DiscoveryServerMain</galaxy.mainclass>
     <ness.root.dir>${project.parent.basedir}</ness.root.dir>
   </properties>
 
@@ -22,6 +20,11 @@
     <dependency>
       <groupId>com.nesscomputing.service.discovery</groupId>
       <artifactId>discovery-client</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>dnsjava</groupId>
+      <artifactId>dnsjava</artifactId>
     </dependency>
 
     <dependency>
@@ -36,16 +39,6 @@
 
     <dependency>
       <groupId>com.nesscomputing.components</groupId>
-      <artifactId>ness-galaxy</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.nesscomputing.components</groupId>
-      <artifactId>ness-httpserver</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-jmx</artifactId>
     </dependency>
 
@@ -56,22 +49,7 @@
 
     <dependency>
       <groupId>com.nesscomputing.components</groupId>
-      <artifactId>ness-jersey</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.nesscomputing.components</groupId>
-      <artifactId>ness-jackson</artifactId>
-    </dependency>
-
-    <dependency>
-        <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-quartz</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.zookeeper</groupId>
-      <artifactId>zookeeper</artifactId>
     </dependency>
 
     <dependency>
@@ -82,11 +60,6 @@
     <dependency>
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-core</artifactId>
     </dependency>
 
     <dependency>
